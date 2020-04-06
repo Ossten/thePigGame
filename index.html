@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Pig Game</title>
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">43</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">11</div>
+            </div>
+        </div>
+
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+        <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+        <img src="dice-5.png" alt="Dice" class="dice1">
+        <img src="dice-5.png" alt="Dice" class="dice1-1">
+        <img src="dice-5.png" alt="Dice" class="dice1-2">
+        <img src="dice-5.png" alt="Dice" class="dice1-3">
+        <img src="dice-5.png" alt="Dice" class="dice1-4">
+        <img src="dice-5.png" alt="Dice" class="dice2">
+        <img src="dice-5.png" alt="Dice" class="dice2-1">
+        <img src="dice-5.png" alt="Dice" class="dice2-2">
+        <img src="dice-5.png" alt="Dice" class="dice2-3">
+        <img src="dice-5.png" alt="Dice" class="dice2-4">
+        <div id="maxScore" style="text-align:center; left: 47%"></div>
+        <form name="maxLimitForm" action="" class="input-score">
+            <label id="scoreLimit">Set Score Limit max 1000</label><br>
+            <input id="currentMaxScore" style="text-align: center;" name="maxLimitValue" placeholder="100" value="100"><br>
+            <button id="scoreLimitBtn" type="button" style="position:absolute; left: 49% "
+                onclick="validate()">Submit</button>
+        </form>
+        <div>
+            <p3>Game Rules:</p3>
+            <p>1. Input the maximum global score goal</p>
+            <p>2. Press hold when you have feeling that is the best current score you got</p>
+            <p>3. Rolling 1 on boths dices resets the current score </p>
+            <p>4. Rolling 6 on both dices resets the global maximum score and current score</p>
+            <p>5. When you see that your maximum and current score exceed the score limit press hold to claim victory</p>
+            <p>6. Winner is the one that gets to or above maximum score limit</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
